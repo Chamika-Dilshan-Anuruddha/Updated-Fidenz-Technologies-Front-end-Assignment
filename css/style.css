@@ -93,6 +93,10 @@ button {
     font-size: 9px;
 }
 
+.footSingle{
+    font-size: 14px;
+}
+
 
 .border{
     border-radius: 20px;
@@ -477,14 +481,14 @@ button {
         white-space: nowrap;
     }
 
-    .foot{
+    .footSingle{
         font-size: 8px;
     }
 
 }
 
 
-@media (min-width: 295px) and (max-width:367px){
+@media (min-width: 295px) and (max-width:382px){
 
     .lineSingle{
         border: none;
@@ -512,14 +516,14 @@ button {
         white-space: nowrap;
     }
 
-    .foot{
+    .footSingle{
         font-size: 8px;
     }
 
 }
 
 
-@media (min-width: 367px) and (max-width: 500px) {
+@media (min-width: 382px) and (max-width: 500px) {
 
    
     .cname {
@@ -542,6 +546,10 @@ button {
     .ctemp{
         font-size: 25px;
         white-space: nowrap;
+    }
+
+    .footSingle{
+        font-size: 10px;
     }
 
 
