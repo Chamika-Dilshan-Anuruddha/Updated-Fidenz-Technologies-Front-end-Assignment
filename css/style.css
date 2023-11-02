@@ -1,0 +1,548 @@
+.App{
+    background-color: #1e2027;
+    min-width: 245px;  /* minimum width of the application page can have */
+    min-height: 100vh;  
+}
+  
+
+.main-container{
+    background-image: url('../images/backgroundImg.png'); /* Replace with your image path */
+    background-size: 100%  40%; 
+    background-repeat: no-repeat; 
+}
+
+
+.enterData {
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+.enterCitytext {
+    width: 200px; 
+    padding: 5px;
+    background-color: #1f2127;
+    color: white;
+}
+  
+button {
+    background-color: #6b5dd3; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100px;
+    
+}
+
+
+.footerStyle {
+    background-color:#2f333d;
+    color: #ffffff;
+    text-align: center;
+    height: 10%;
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: center; /* horizontally center items */   
+   
+}
+
+.footerStyle p{
+    margin-top: 25px;
+    
+}
+
+
+.link-button {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+    cursor: pointer; 
+    padding: 0; 
+    font-size: 16px; 
+    white-space: nowrap;
+    position: relative;
+    left: -13%;
+    margin-top: 15px;
+    
+}
+  
+.link-button:hover {
+    color: darkblue; /* Change link color on hover */
+}
+
+
+.custom-card {
+    max-width: 800px; 
+    margin: 0 auto; 
+ 
+}
+
+
+.line{
+    border-right: 1px solid white;
+}
+
+.lineSingle{
+    border-right: 2px solid rgb(231, 222, 222);
+}
+
+
+.foot{
+    font-size: 9px;
+}
+
+
+.border{
+    border-radius: 20px;
+}
+
+.borderBottom{
+    border-radius: 20px;
+    border-bottom: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+/* Index page media quries*/ 
+
+/* Media Query for heading section  */
+@media (max-width: 360px) {
+    button{
+        width: 80px; 
+        font-size: 10px;
+  
+     
+    }
+
+    .enterCitytext {
+        width: 150px; 
+        
+      } 
+}
+
+@media (min-width: 360px) and (max-width: 400px) {
+    button{
+        width: 80px; 
+        font-size: 12px;
+    }
+
+    .enterCitytext {
+        width: 170px; 
+        
+      } 
+}
+
+
+@media (min-width: 2000px) {
+    button{
+        width: 160px; 
+        font-size: 20px;
+        height: 48px;
+    }
+
+    .enterCitytext {
+        width: 300px; 
+        height: 48px;   
+    }      
+
+}
+
+
+.cname{
+    margin-top: 15px;
+}
+
+
+/* CSS for reducing font size when screen width is below 350px */
+
+@media (max-width: 320px) {
+
+    .line{
+        border: none;
+    }
+
+
+    .bi-cloud-lightning-rain{
+       display: none;
+    }
+
+    .c1name, .c2name, .c3name, .c4name,.c5name,.c6name,.c7name,.c8name{
+        font-size: 16px;
+    }
+
+    .c1dt,.c2dt,.c3dt,.c4dt,.c5dt,.c6dt,.c7dt,.c8dt, .c1desc, .c2desc,.c3desc,.c4desc,.c5desc,.c6desc,.c7desc,.c8desc{
+        font-size: 12px;
+
+    }
+
+    .ctmin{
+        font-size: 9px;
+
+    }
+
+    .link-button{
+        left: -2%;
+    }
+
+    .c1temp,.c2temp,.c3temp,.c4temp,.c5temp,.c6temp,.c7temp,.c8temp{
+        font-size: 30px;
+        white-space: nowrap;
+    }
+
+
+} 
+
+
+
+@media (min-width: 320px) and (max-width:380px){
+
+    .line{
+        border: none;
+    }
+
+    .c1name, .c2name, .c3name, .c4name,.c5name,.c6name,.c7name,.c8name{
+        font-size: 17px;
+        margin-top: 5px;
+      
+    }
+
+    .link-button{
+        left: -2%;
+    }
+
+   
+    .c1dt,.c2dt,.c3dt,.c4dt,.c5dt,.c6dt,.c7dt,.c8dt, .c1desc, .c2desc,.c3desc,.c4desc,.c5desc,.c6desc,.c7desc,.c8desc{
+        font-size: 12px;
+
+    }
+
+    .ctmin{
+        font-size: 8px;
+
+    }
+
+    
+    .c1temp,.c2temp,.c3temp,.c4temp,.c5temp,.c6temp,.c7temp,.c8temp{
+        font-size: 25px;
+    }
+
+     
+}  
+
+
+@media (min-width: 380px) and (max-width:480px){
+
+    
+
+    .c1name, .c2name, .c3name, .c4name,.c5name,.c6name,.c7name,.c8name{
+        font-size: 20px;
+        margin-top: 5px;
+      
+    }
+
+    .link-button{
+ 
+        left: -2%;
+    }
+
+   
+
+    .c1dt,.c2dt,.c3dt,.c4dt,.c5dt,.c6dt,.c7dt,.c8dt, .c1desc, .c2desc,.c3desc,.c4desc,.c5desc,.c6desc,.c7desc,.c8desc{
+        font-size: 12px;
+
+    }
+
+    .ctmin{
+        font-size: 10px;
+
+    }
+
+    
+
+    .c1temp,.c2temp,.c3temp,.c4temp,.c5temp,.c6temp,.c7temp,.c8temp{
+        font-size: 35px;
+    }
+ 
+      
+}  
+
+
+@media (min-width: 480px) and (max-width:768px){
+
+    
+    .c1name, .c2name, .c3name, .c4name,.c5name,.c6name,.c7name,.c8name{
+        font-size: 25px;
+        margin-top: 5px;
+      
+    }
+
+    .link-button{
+        position: relative;
+        left: -2%;
+    }
+
+    .c1name,.c7name, .c3name,.c8name,.c6name,.c2name{
+        position: relative;
+        left: -2%;
+    }
+
+    .c1dt,.c2dt,.c3dt,.c4dt,.c5dt,.c6dt,.c7dt,.c8dt, .c1desc, .c2desc,.c3desc,.c4desc,.c5desc,.c6desc,.c7desc,.c8desc{
+        font-size: 14px;
+
+    }
+
+    .ctmin{
+        font-size: 12px;
+
+    }
+
+    
+    .c1temp,.c2temp,.c3temp,.c4temp,.c5temp,.c6temp,.c7temp,.c8temp{
+        font-size: 45px;
+    }
+
+        
+}  
+
+
+
+@media (min-width: 768px) and (max-width:991px){
+
+    .line{
+        border: none;
+    }
+
+    
+    .c1name, .c2name, .c3name, .c4name,.c5name,.c6name,.c7name,.c8name{
+        font-size: 22px;
+        margin-top: 8px;
+      
+    }
+
+    .link-button{
+        left: -2%;
+    }
+
+   
+    .c1dt,.c2dt,.c3dt,.c4dt,.c5dt,.c6dt,.c7dt,.c8dt, .c1desc, .c2desc,.c3desc,.c4desc,.c5desc,.c6desc,.c7desc,.c8desc{
+        font-size: 16px;
+
+    }
+
+    .ctmin{
+        font-size: 14px;
+
+    }
+
+    
+    .c1temp,.c2temp,.c3temp,.c4temp,.c5temp,.c6temp,.c7temp,.c8temp{
+        font-size: 50px;
+        white-space: nowrap;
+    }
+
+    .foot{
+        font-size: 12px;
+    }
+    
+      
+}  
+
+
+@media (min-width: 992px) and (max-width:1039px){
+
+
+    
+    .c1name, .c2name, .c3name, .c4name,.c5name,.c6name,.c7name,.c8name{
+        font-size: 20px;
+        margin-top: 5px;
+      
+    }
+
+    .link-button{
+        left: -2%;
+    }
+
+   
+    .c1dt,.c2dt,.c3dt,.c4dt,.c5dt,.c6dt,.c7dt,.c8dt, .c1desc, .c2desc,.c3desc,.c4desc,.c5desc,.c6desc,.c7desc,.c8desc{
+        font-size: 14px;
+
+    }
+
+    .ctmin{
+        font-size: 12px;
+
+    }
+   
+
+    .c1temp,.c2temp,.c3temp,.c4temp,.c5temp,.c6temp,.c7temp,.c8temp{
+        font-size: 40px;
+   
+    }
+
+    .foot{
+        font-size: 10px;
+    }
+          
+}  
+
+
+
+
+@media (min-width: 1039px) and (max-width:1200px){
+
+
+    .c1name, .c2name, .c3name, .c4name,.c5name,.c6name,.c7name,.c8name{
+        font-size: 20px;
+        margin-top: 5px;
+      
+    }
+
+    .link-button{
+        left: -2%;
+    }
+
+   
+    .c1dt,.c2dt,.c3dt,.c4dt,.c5dt,.c6dt,.c7dt,.c8dt, .c1desc, .c2desc,.c3desc,.c4desc,.c5desc,.c6desc,.c7desc,.c8desc{
+        font-size: 14px;
+
+    }
+
+    .ctmin{
+        font-size: 12px;
+
+    }
+
+    
+    .c1temp,.c2temp,.c3temp,.c4temp,.c5temp,.c6temp,.c7temp,.c8temp{
+        font-size: 40px;
+   
+    }
+
+
+    .foot{
+        font-size: 12px;
+    }
+    
+      
+}  
+
+
+@media (min-width: 2000px){
+
+    .link-button{
+        left: -5%;
+    }
+     
+}  
+
+
+
+
+
+/*singlePage media quires*/
+@media (max-width: 295px){
+
+    .lineSingle{
+        border: none;
+    }
+
+    .cname {
+        font-size: 16px;
+    }
+
+    .cdt, .ctmax, .cdesc{
+        font-size: 6px;
+
+    }
+
+    .ctmin{
+        font-size: 5px;
+    }
+
+    .link-button{
+        left: -2%;
+    }
+
+    .ctemp{
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .foot{
+        font-size: 8px;
+    }
+
+}
+
+
+@media (min-width: 295px) and (max-width:367px){
+
+    .lineSingle{
+        border: none;
+    }
+
+    .cname {
+        font-size: 18px;
+    }
+
+    .cdt, .ctmax, .cdesc{
+        font-size: 8px;
+
+    }
+
+    .ctmin{
+        font-size: 7px;
+    }
+
+    .link-button{
+        left: -2%;
+    }
+
+    .ctemp{
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .foot{
+        font-size: 8px;
+    }
+
+}
+
+
+@media (min-width: 367px) and (max-width: 500px) {
+
+   
+    .cname {
+        font-size: 20px;
+    }
+
+    .cdt, .ctmax, .cdesc{
+        font-size: 12px;
+
+    }
+
+    .ctmin{
+        font-size: 9px;
+    }
+
+    .link-button{
+        left: -2%;
+    }
+
+    .ctemp{
+        font-size: 25px;
+        white-space: nowrap;
+    }
+
+
+} 

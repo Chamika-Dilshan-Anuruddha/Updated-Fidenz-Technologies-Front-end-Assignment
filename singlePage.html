@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css" />
+  
+</head>
+<body>
+
+<div>
+
+    <div class="App">
+
+        <div class="main-container">
+
+            <section class="text-light p-4">
+                
+                <div class="d-flex justify-content-center mt-5">
+                    <!--weather icon-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="50" fill="currentColor" class="bi bi-cloud-lightning-rain" viewBox="0 0 16 16">
+                        <path d="M2.658 11.026a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm-7.5 1.5a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm-.753-8.499a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973zM8.5 1a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 1zM7.053 11.276A.5.5 0 0 1 7.5 11h1a.5.5 0 0 1 .474.658l-.28.842H9.5a.5.5 0 0 1 .39.812l-2 2.5a.5.5 0 0 1-.875-.433L7.36 14H6.5a.5.5 0 0 1-.447-.724l1-2z"/>
+                    </svg>
+
+                    <h3 class="mb-3 " style="white-space: nowrap;">Weather App</h3>
+                </div>
+                
+            </section>
+    
+
+
+            
+        
+
+
+        <section class="p-5">
+
+            <div class="container">
+
+                <!--first row-->
+                <div class="row-sm text-center g-4">
+                    
+
+                    <div class="col">
+                        <div class="card  text-light custom-card border" style="background: linear-gradient(to bottom, rgb(5, 157, 157), #010101)">
+                                
+                                <div class="row">
+                                    <div class="col">
+                                        <h3 class='cname'></h3>
+                                    </div>
+                                </div>
+
+                                <div class="card-header">
+                                    <div class="row align-items-center">
+                                        <div class="col lineSingle" > 
+                                            <p class='cdt'> </p>   
+                                            <img class='cimg'  src='' alt='weather Img' />
+                                            <p class='cdesc'> </p> 
+
+                                        </div>
+                                        <div class="col">
+                                            <h1 class='ctemp'> </h1>
+                                            <p class="ctmax"><span style="display: inline;">Temp min: </span><span class='ctmi'></span></p>
+                                            <p class="ctmax"><span style="display: inline;">Temp max: </span><span class='ctma'></span></p>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+
+                                <div class="card-body bg-dark bg-gradient text-center borderBottom">
+
+                                    <div class="row foot">
+                                        <div class="col lineSingle">
+                                            <p><span style="display: inline;">Pressure: </span><span class='cp'></span></p>
+                                            <p><span style="display: inline;">Humidity: </span><span class='ch'></span>%</p>
+                                            <p><span style="display: inline;">Visibility: </span><span class='cv'></span></p>
+                                         
+                                        </div>
+                                        <div class="col lineSingle">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="40"  viewBox="0 0 448 512">
+                                            <style>svg{fill:#f9fafb}</style><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+                                        
+                                            <p class='cd' style="margin-top: 10px;"></p>
+
+                                        </div>
+
+                                        <div class="col">
+                                            <p><span style="display: inline;">Sunrise: </span><span class='csr'></span></p>
+                                            <p><span style="display: inline;">Sunset: </span><span class='css'></span></p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        
+    </div>
+</div>
+
+<script>
+    // Function to parse query parameters from URL
+    function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // Retrieve and parse the data from the URL
+    const encodedData = getQueryParameter('data');
+    if (encodedData) {
+        const decodedData = decodeURIComponent(encodedData);
+        const data = JSON.parse(decodedData);
+
+        // Update the content with the parsed data
+
+        var nameElement = document.querySelector('.cname');
+        var dt = document.querySelector('.cdt');
+        var desc = document.querySelector('.cdesc');
+        var temp = document.querySelector('.ctemp');
+        var imgElement = document.querySelector('.cimg');
+
+        var tempMin = document.querySelector('.ctmi');
+        var tempMax = document.querySelector('.ctma');
+
+        var pressure = document.querySelector('.cp');
+        var humidity = document.querySelector('.ch');
+        var visibility = document.querySelector('.cv');
+        var degree = document.querySelector('.cd');
+        var sunrise = document.querySelector('.csr');
+        var sunset = document.querySelector('.css');
+
+        nameElement.innerHTML = data.name;
+        dt.innerHTML = data.dt;
+        desc.innerHTML = data.description;
+        temp.innerHTML = data.temperature;
+        imgElement.src = data.img;
+        tempMin.innerHTML = data.tmin;
+        tempMax.innerHTML = data.tmax;
+        pressure.innerHTML = data.pressure;
+        humidity.innerHTML = data.humidity;
+        visibility.innerHTML = data.visibility;
+        degree.innerHTML = data.degree;
+        sunrise.innerHTML = data.sunrise;
+        sunset.innerHTML = data.sunset;
+
+    } else {
+        // Handle the case where no data is provided
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = '<p>No data available.</p>';
+    }
+</script>
+
+
+    <footer class="footerStyle">
+        <p>2023 Fidenz Technologies</p>
+    </footer>
+</div>
+</body>
+</html>

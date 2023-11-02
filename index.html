@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a55b052a49.js" crossorigin="anonymous"></script> <!--Fontawesome icons-->
+
+    <script type="module" src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Weather App</title>
+</head>
+<body>
+<div>
+
+        <div class="App">
+
+            <div class="main-container">
+
+                <section class="text-light p-4">
+                    <div class="container">
+                    <div class="d-flex justify-content-center mb-4">
+                        <!--weather icon-->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="50" fill="currentColor" class="bi bi-cloud-lightning-rain" viewBox="0 0 16 16">
+                            <path d="M2.658 11.026a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm-7.5 1.5a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm-.753-8.499a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973zM8.5 1a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 1zM7.053 11.276A.5.5 0 0 1 7.5 11h1a.5.5 0 0 1 .474.658l-.28.842H9.5a.5.5 0 0 1 .39.812l-2 2.5a.5.5 0 0 1-.875-.433L7.36 14H6.5a.5.5 0 0 1-.447-.724l1-2z"/>
+                        </svg>
+
+                        <h3 class="mb-3 " style="white-space: nowrap;">Weather App</h3>
+                    </div>
+            
+                    <div class='enterData'>
+                        <input class='enterCitytext' type='text' name='city' placeholder='Enter a city'></input>
+                        <button>Add City</button>
+
+                    </div>
+                    </div>
+                    
+                  
+                </section>
+
+             
+            
+
+
+                <!-- Boxes -->
+                <section class="p-5">
+
+                    <div class="container">
+
+                        <!--first row-->
+                        <div class="row text-center g-5 mb-5">
+
+                            <div class="col-md ">
+                                <div class="card  text-light border " style="background: linear-gradient(to bottom, #378de7, #010101)">
+                                
+                                        <div class="card-header " >
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <button class="link-button" onclick="handleCardClick(1)"><h4 class='c1name'></h4></button>
+                                                    <p class='c1dt'> </p>   
+                                                    <img class='c1img'  src='' alt='weather Img' />
+                                                    <p class='c1desc'> </p> 
+
+                                                </div>
+                                                <div class="col">
+                                                    <h1 class='c1temp'> </h1>
+                                                    <p class="ctmin"><span  style="display: inline;">Temp min: </span><span class='c1tmi'></span></p>
+                                                    <p class="ctmin"><span style="display: inline;">Temp max: </span><span class='c1tma'></span></p>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+
+                                        <div class="card-body bg-dark bg-gradient text-center borderBottom">
+
+                                            <div class="row foot">
+                                                <div class="col line" >
+                                                    <p><span style="display: inline;">Pressure: </span><span class='c1p'></span></p>
+                                                    <p><span style="display: inline;">Humidity: </span><span class='c1h'></span>%</p>
+                                                    <p><span style="display: inline;">Visibility: </span><span class='c1v'></span></p>
+                                                 
+                                                </div>
+                                                <div class="col line">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="40"  viewBox="0 0 448 512">
+                                                    <style>svg{fill:#f9fafb}</style><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+                                                
+                                                    <p class='c1d' style="margin-top: 10px;"></p>
+
+                                                </div>
+
+                                                <div class="col">
+                                                    <p><span style="display: inline;">Sunrise: </span><span class='c1sr'></span></p>
+                                                    <p><span style="display: inline;">Sunset: </span><span class='c1ss'></span></p>
+
+                                                </div>
+
+                                            </div>
+
+                                            
+                                            
+                                           
+                                            
+                                        
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md">
+                                <div class="card  text-light border" style="background: linear-gradient(to bottom, #acb83c, #010101)">
+                                
+                                        <div class="card-header">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <button class="link-button" onclick="handleCardClick(2)"><h4 class='c2name'></h4></button>
+                                                    <p class='c2dt'> </p>   
+                                                    <img class='c2img'  src='' alt='weather Img' />
+                                                    <p class='c2desc'> </p> 
+
+                                                </div>
+                                                <div class="col">
+                                                    <h1 class='c2temp'> </h1>
+                                                    <p class="ctmin"><span style="display: inline;">Temp min: </span><span class='c2tmi'></span></p>
+                                                    <p class="ctmin"><span style="display: inline;">Temp max: </span><span class='c2tma'></span></p>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+
+                                        <div class="card-body bg-dark bg-gradient text-center borderBottom">
+
+                                            <div class="row foot">
+                                                <div class="col line">
+                                                    <p><span style="display: inline;">Pressure: </span><span class='c2p'></span></p>
+                                                    <p><span style="display: inline;">Humidity: </span><span class='c2h'></span>%</p>
+                                                    <p><span style="display: inline;">Visibility: </span><span class='c2v'></span></p>
+                                                 
+                                                </div>
+                                                <div class="col line" >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="40"  viewBox="0 0 448 512">
+                                                    <style>svg{fill:#f9fafb}</style><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+                                                
+                                                    <p class='c2d' style="margin-top: 10px;"></p>
+
+                                                </div>
+
+                                                <div class="col">
+                                                    <p><span style="display: inline;">Sunrise: </span><span class='c2sr'></span></p>
+                                                    <p><span style="display: inline;">Sunset: </span><span class='c2ss'></span></p>
+
+                                                </div>
+
+                                            </div>
+
+                                            
+                                            
+                                           
+                                            
+                                        
+                                        </div>
+                                </div>
+                            </div>
+
+
+                            
+
+
+
+
+                            <div class="col-md">
+                                <div class="card  text-light border" style="background: linear-gradient(to bottom,  #40b681, #010101)">
+                                
+                                        <div class="card-header">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <button class="link-button" onclick="handleCardClick(3)"><h4 class='c3name'></h4></button>
+                                                    <p class='c3dt'> </p>   
+                                                    <img class='c3img'  src='' alt='weather Img' />
+                                                    <p class='c3desc'> </p> 
+
+                                                </div>
+                                                <div class="col">
+                                                    <h1 class='c3temp'> </h1>
+                                                    <p class="ctmin"><span style="display: inline;">Temp min: </span><span class='c3tmi'></span></p>
+                                                    <p class="ctmin"><span style="display: inline;">Temp max: </span><span class='c3tma'></span></p>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+
+                                        <div class="card-body bg-dark bg-gradient text-center borderBottom">
+
+                                            <div class="row foot">
+                                                <div class="col line" >
+                                                    <p><span style="display: inline;">Pressure: </span><span class='c3p'></span></p>
+                                                    <p><span style="display: inline;">Humidity: </span><span class='c3h'></span>%</p>
+                                                    <p><span style="display: inline;">Visibility: </span><span class='c3v'></span></p>
+                                                 
+                                                </div>
+                                                <div class="col line" >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="40"  viewBox="0 0 448 512">
+                                                    <style>svg{fill:#f9fafb}</style><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+                                                
+                                                    <p class='c3d' style="margin-top: 10px;"></p>
+
+                                                </div>
+
+                                                <div class="col">
+                                                    <p><span style="display: inline;">Sunrise: </span><span class='c3sr'></span></p>
+                                                    <p><span style="display: inline;">Sunset: </span><span class='c3ss'></span></p>
+
+                                                </div>
+
+                                            </div>
+
+                                            
+                                            
+                                           
+                                            
+                                        
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+
+
+                        <!--second row-->
+                        <div class="row text-center g-5 mb-5">
+
+                            <div class="col-md">
+                                <div class="card  text-light border" style="background: linear-gradient(to bottom,   #de934e, #010101)">
+                                
+                                        <div class="card-header">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <button class="link-button" onclick="handleCardClick(4)"><h4 class='c4name'></h4></button>
+                                                    <p class='c4dt'> </p>   
+                                                    <img class='c4img'  src='' alt='weather Img' />
+                                                    <p class='c4desc'> </p> 
+
+                                                </div>
+                                                <div class="col">
+                                                    <h1 class='c4temp'> </h1>
+                                                    <p class="ctmin"><span style="display: inline;">Temp min: </span><span class='c4tmi'></span></p>
+                                                    <p class="ctmin"><span style="display: inline;">Temp max: </span><span class='c4tma'></span></p>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+
+                                        <div class="card-body bg-dark bg-gradient text-center borderBottom">
+
+                                            <div class="row foot">
+                                                <div class="col line">
+                                                    <p><span style="display: inline;">Pressure: </span><span class='c4p'></span></p>
+                                                    <p><span style="display: inline;">Humidity: </span><span class='c4h'></span>%</p>
+                                                    <p><span style="display: inline;">Visibility: </span><span class='c4v'></span></p>
+                                                 
+                                                </div>
+                                                <div class="col line">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="40"  viewBox="0 0 448 512">
+                                                    <style>svg{fill:#f9fafb}</style><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+                                                
+                                                    <p class='c4d' style="margin-top: 10px;"></p>
+
+                                                </div>
+
+                                                <div class="col">
+                                                    <p><span style="display: inline;">Sunrise: </span><span class='c4sr'></span></p>
+                                                    <p><span style="display: inline;">Sunset: </span><span class='c4ss'></span></p>
+
+                                                </div>
+
+                                            </div>
+
+                                            
+                                            
+                                           
+                                            
+                                        
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md">
+                                <div class="card  text-light border" style="background: linear-gradient(to bottom,   #9c3939, #010101)">
+                                
+                                        <div class="card-header">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <button class="link-button" onclick="handleCardClick(5)"><h4 class='c5name'></h4></button>
+                                                    <p class='c5dt'> </p>   
+                                                    <img class='c5img'  src='' alt='weather Img' />
+                                                    <p class='c5desc'> </p> 
+
+                                                </div>
+                                                <div class="col">
+                                                    <h1 class='c5temp'> </h1>
+                                                    <p class="ctmin"><span style="display: inline;">Temp min: </span><span class='c5tmi'></span></p>
+                                                    <p class="ctmin"><span style="display: inline;">Temp max: </span><span class='c5tma'></span></p>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+
+                                        <div class="card-body bg-dark bg-gradient text-center borderBottom">
+
+                                            <div class="row foot">
+                                                <div class="col line">
+                                                    <p><span style="display: inline;">Pressure: </span><span class='c5p'></span></p>
+                                                    <p><span style="display: inline;">Humidity: </span><span class='c5h'></span>%</p>
+                                                    <p><span style="display: inline;">Visibility: </span><span class='c5v'></span></p>
+                                                 
+                                                </div>
+                                                <div class="col line" >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="40"  viewBox="0 0 448 512">
+                                                    <style>svg{fill:#f9fafb}</style><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+                                                
+                                                    <p class='c5d' style="margin-top: 10px;"></p>
+
+                                                </div>
+
+                                                <div class="col">
+                                                    <p><span style="display: inline;">Sunrise: </span><span class='c5sr'></span></p>
+                                                    <p><span style="display: inline;">Sunset: </span><span class='c5ss'></span></p>
+
+                                                </div>
+
+                                            </div>
+
+                                            
+                                            
+                                           
+                                            
+                                        
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md">
+                                <div class="card  text-light border" style="background: linear-gradient(to bottom,   #6149cb, #010101)">
+                                
+                                        <div class="card-header">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <button class="link-button" onclick="handleCardClick(6)"><h4 class='c6name'></h4></button>
+                                                    <p class='c6dt'> </p>   
+                                                    <img class='c6img'  src='' alt='weather Img' />
+                                                    <p class='c6desc'> </p> 
+
+                                                </div>
+                                                <div class="col">
+                                                    <h1 class='c6temp'> </h1>
+                                                    <p class="ctmin"><span style="display: inline;">Temp min: </span><span class='c6tmi'></span></p>
+                                                    <p class="ctmin"><span style="display: inline;">Temp max: </span><span class='c6tma'></span></p>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+
+                                        <div class="card-body bg-dark bg-gradient text-center borderBottom">
+
+                                            <div class="row foot">
+                                                <div class="col line">
+                                                    <p><span style="display: inline;">Pressure: </span><span class='c6p'></span></p>
+                                                    <p><span style="display: inline;">Humidity: </span><span class='c6h'></span>%</p>
+                                                    <p><span style="display: inline;">Visibility: </span><span class='c6v'></span></p>
+                                                 
+                                                </div>
+                                                <div class="col line">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="40"  viewBox="0 0 448 512">
+                                                    <style>svg{fill:#f9fafb}</style><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+                                                
+                                                    <p class='c6d' style="margin-top: 10px;"></p>
+
+                                                </div>
+
+                                                <div class="col">
+                                                    <p><span style="display: inline;">Sunrise: </span><span class='c6sr'></span></p>
+                                                    <p><span style="display: inline;">Sunset: </span><span class='c6ss'></span></p>
+
+                                                </div>
+
+                                            </div>
+
+                                            
+                                            
+                                           
+                                            
+                                        
+                                        </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!--third row-->
+                        <div class="row text-center g-5 mb-5">
+
+                            <div class="col-md">
+                                <div class="card  text-light border" style="background: linear-gradient(to bottom, #cd41bb, #010101)">
+                                
+                                        <div class="card-header">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <button class="link-button" onclick="handleCardClick(7)"><h4 class='c7name'></h4></button>
+                                                    <p class='c7dt'> </p>   
+                                                    <img class='c7img'  src='' alt='weather Img' />
+                                                    <p class='c7desc'> </p> 
+
+                                                </div>
+                                                <div class="col">
+                                                    <h1 class='c7temp'> </h1>
+                                                    <p class="ctmin"><span style="display: inline;">Temp min: </span><span class='c7tmi'></span></p>
+                                                    <p class="ctmin"><span style="display: inline;">Temp max: </span><span class='c7tma'></span></p>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+
+                                        <div class="card-body bg-dark bg-gradient text-center borderBottom">
+
+                                            <div class="row foot">
+                                                <div class="col line" >
+                                                    <p><span style="display: inline;">Pressure: </span><span class='c7p'></span></p>
+                                                    <p><span style="display: inline;">Humidity: </span><span class='c7h'></span>%</p>
+                                                    <p><span style="display: inline;">Visibility: </span><span class='c7v'></span></p>
+                                                
+                                                </div>
+                                                <div class="col line">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="40"  viewBox="0 0 448 512">
+                                                    <style>svg{fill:#f9fafb}</style><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+                                                
+                                                    <p class='c7d' style="margin-top: 10px;"></p>
+
+                                                </div>
+
+                                                <div class="col">
+                                                    <p><span style="display: inline;">Sunrise: </span><span class='c7sr'></span></p>
+                                                    <p><span style="display: inline;">Sunset: </span><span class='c7ss'></span></p>
+
+                                                </div>
+
+                                            </div>
+
+                                            
+                                            
+                                        
+                                            
+                                        
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md">
+                                <div class="card  text-light border" style="background: linear-gradient(to bottom,  #1ced1c, #010101)">
+                                
+                                        <div class="card-header">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <button class="link-button" onclick="handleCardClick(8)"><h4 class='c8name'></h4></button>
+                                                    <p class='c8dt'> </p>   
+                                                    <img class='c8img'  src='' alt='weather Img' />
+                                                    <p class='c8desc'> </p> 
+
+                                                </div>
+                                                <div class="col">
+                                                    <h1 class='c8temp'> </h1>
+                                                    <p class="ctmin"><span style="display: inline;">Temp min: </span><span class='c8tmi'></span></p>
+                                                    <p class="ctmin"><span style="display: inline;">Temp max: </span><span class='c8tma'></span></p>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+
+                                        <div class="card-body bg-dark bg-gradient text-center borderBottom">
+
+                                            <div class="row foot">
+                                                <div class="col line" >
+                                                    <p><span style="display: inline;">Pressure: </span><span class='c8p'></span></p>
+                                                    <p><span style="display: inline;">Humidity: </span><span class='c8h'></span>%</p>
+                                                    <p><span style="display: inline;">Visibility: </span><span class='c8v'></span></p>
+                                                
+                                                </div>
+                                                <div class="col line">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="40"  viewBox="0 0 448 512">
+                                                    <style>svg{fill:#f9fafb}</style><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+                                                
+                                                    <p class='c8d' style="margin-top: 10px;"></p>
+
+                                                </div>
+
+                                                <div class="col">
+                                                    <p><span style="display: inline;">Sunrise: </span><span class='c8sr'></span></p>
+                                                    <p><span style="display: inline;">Sunset: </span><span class='c8ss'></span></p>
+
+                                                </div>
+
+                                            </div>
+
+                                            
+                                            
+                                        
+                                            
+                                        
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md"></div>
+
+                        </div>   
+                        
+                        
+                    </div>
+                            
+
+                        
+                
+                
+
+
+                </section>
+
+
+   
+        </div>
+    </div> 
+        
+    <footer class="footerStyle">
+        <p>2023 Fidenz Technologies</p>
+    </footer>
+
+
+    <script>
+
+    function handleCardClick(no) {
+
+
+            // Get the data from the fields within the container
+            const name = document.querySelector(`.c${no}name`).textContent;
+            const dt = document.querySelector(`.c${no}dt`).textContent;
+            const description = document.querySelector(`.c${no}desc`).textContent;
+            const img = document.querySelector(`.c${no}img`).getAttribute('src'); 
+            const temperature = document.querySelector(`.c${no}temp`).textContent;
+            const tmin = document.querySelector(`.c${no}tmi`).textContent;
+            const tmax = document.querySelector(`.c${no}tma`).textContent;
+            const Pressure = document.querySelector(`.c${no}p`).textContent;
+            const Humidity = document.querySelector(`.c${no}h`).textContent;
+            const Visibility = document.querySelector(`.c${no}v`).textContent;
+            const Degree = document.querySelector(`.c${no}d`).textContent;
+            const Sunrise = document.querySelector(`.c${no}sr`).textContent;
+            const Sunset = document.querySelector(`.c${no}ss`).textContent;
+
+
+    
+            // Construct a data object or URL to pass to the single page
+            const dataToPass = {
+                name: name,
+                dt: dt,
+                description: description,
+                img: img, // Updated
+                temperature: temperature,
+                tmin: tmin,
+                tmax: tmax,
+                pressure:Pressure, 
+                humidity: Humidity,
+                visibility: Visibility,
+                degree: Degree,
+                sunrise: Sunrise,
+                sunset: Sunset
+            };
+
+
+            // Encode the data and construct the URL
+            const encodedData = encodeURIComponent(JSON.stringify(dataToPass));
+            const url = `singlePage.html?data=${encodedData}`;
+            window.location.href = url;
+
+        }
+
+
+           
+    </script>
+    
+
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        
+</div>          
+      
+</body>
+</html>
